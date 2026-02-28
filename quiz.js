@@ -78,7 +78,9 @@ nextBtn.addEventListener("click", () => {
     if(currentQuestion < questions.length){
         loadQuestion();
     } else {
-        alert("Quiz Finished! Your Score: " + score);
+        localStorage.setItem("score", score);
+       window.location.href = "result.html";
     }
 
 });
+
